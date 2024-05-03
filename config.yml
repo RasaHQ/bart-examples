@@ -1,0 +1,14 @@
+recipe: default.v1
+language: en
+pipeline:
+- name: LLMCommandGenerator
+  trace_prompt_tokens: true
+  llm:
+    model_name: gpt-4
+    request_timeout: 7
+    max_tokens: 256
+  
+policies:
+- name: FlowPolicy
+- name: IntentlessPolicy
+assistant_id: 20240502-133626-adventurous-packet
